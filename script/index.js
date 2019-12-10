@@ -1,4 +1,5 @@
 document.querySelector('#solveBtn').addEventListener('click', polov_del);
+//document.querySelector('#solveBtn').addEventListener('click', pow);
 
 /*  Код для модального окна */
 const modal = document.querySelector('#tableModal');
@@ -120,6 +121,7 @@ function pow(str) {
                         } else if (j == 2) {
                             newStr += Math.cos(+(buf));
                         } else if (j == 3) {
+
                             newStr += Math.tan(+(buf));
                         }
                         positionEnd = k + 1;
