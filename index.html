@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Solve Application Web</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,900|Source+Sans+Pro&display=swap&subset=cyrillic"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
     <h1 class="main-title">Метод половинного деления</h1>
-    <form action="" class="form" id="main-form">
-        <legend for="#input-expr">Введите уравнение:</legend>
-        <input type="text" class="form__input" id="input-expr">
-        <legend for="#input-error">Введите точность вычислений:</legend>
-        <input type="text" class="form__input" id="input-error">
-        <legend for="#input-error">Введите левую границу а:</legend>
-        <input type="text" class="form__input" id="start">
-        <legend for="#input-error">Введите правую границу b:</legend>
-        <input type="text" class="form__input" id="end">
-        <!-- <button class="btn" id="solveBtn">Вычислить</button> -->
-    </form>
-    <button class="btn" id="solveBtn">Вычислить</button>
-    <p class="output" id="out"></p>
+    <div class="wrapper">
+        <main>
+            <form action="" class="form" id="main-form">
+                <label class="form__label" for="#input-expr">Введите уравнение:</label>
+                <input type="text" class="form__input" id="input-expr">
+                <label class="form__label" for="#input-error">Введите точность вычислений:</label>
+                <input type="text" class="form__input" id="input-error">
+                <label class="form__label" for="#input-error">Введите левую границу а:</label>
+                <input type="text" class="form__input" id="start">
+                <label class="form__label" for="#input-error">Введите правую границу b:</label>
+                <input type="text" class="form__input" id="end">
+                <!-- <button class="btn" id="solveBtn">Вычислить</button> -->
+            </form>
+            <button class="btn" id="solveBtn">Вычислить</button>
+        </main>
 
+        <section class="output">
+            <p class="out" id="out">Здесь будет результат вычислений</p>
+            <button class="btn btn--table noDisplay" id="tableBtn">Таблица итераций</button>
+        </section>
+    </div>
+
+    <div class="modal" id="tableModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Таблица значений -->
+            <div class="table">
+                <h2 class="secondTitle">Таблица итераций:</h2>
+                <table id="tab" class="myTable" cellspacing="0">
+                    <tr>
+                        <td>Итерация:</td>
+                        <td>x</td>
+                        <td>y</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Готовим контейнер для диаграммы -->
+    <div id="content" class="myChart" align="center">
+        <p class="out" id="outChart">Здесь будет график</p>
+        <canvas id="myChart" width="1500px" height="600"></canvas>
+    </div>
+
+
+    <!-- Подключаем JQuery и Chart.js -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js">
+    </script>
     <script src="./script/index.js"></script>
 </body>
+
 </html>
