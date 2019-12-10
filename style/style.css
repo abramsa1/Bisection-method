@@ -2,7 +2,161 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 0;
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5; 
+    padding: 30px 0;
+
+}
+button {
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+    height: 56px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+.main-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+    text-align: center;
+    margin: 50px;
+    font-weight: 700;
+    color: #d4af7a;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+main {
+    margin-right: 3%;
+}
+main, .myChart, .output {
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+    /* height: 550px; */
+    margin-bottom: 100px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    text-align: center;
+}
+main:hover, .myChart:hover, .output:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.out {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.form {
+    margin-top: 50px;
+}
+.form__label {
+    display: block;
+    font-size: 16px;
+    color: rgba(54, 54, 54, 0.5);
+    cursor: pointer;
+    margin-top: 22px;
+}
+.form__input {
+    display: block;
+    margin: 8px auto 0px;
+    width: 40%;
+    padding-bottom: 8px;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+    outline: none;
+}
+.btn {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #d4af7a; 
+    text-transform: uppercase;
+    transition: ease-in 0.4s;
+}
+.btn--table {
+    margin: 0;
+    margin-top: 20px;
+    display: block;
+}
+.noDisplay {
+    display: none;
+}
+.btn:hover {
+    color: #d4af7a;
+    background: #fff;
+    border: 1px solid #d4af7a;
+}
+.myChart {
+    padding: 50px 30px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+    margin: 0 auto;
+    display: none;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #333;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 0;
+}
+.secondTitle {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 35px;
+}
+.myTable {
+    text-align: center;
+    color: #222;
+    padding: 20px;
+    font-size: 20pt;
+    margin: 30px auto;
+    min-width: 600px;
+}
+.myTable td {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid black;
 }
