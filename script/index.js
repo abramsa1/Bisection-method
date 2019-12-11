@@ -150,6 +150,7 @@ function pow(str) {
                         } else if (j == 2) {
                             newStr += Math.cos(+(buf));
                         } else if (j == 3) {
+
                             newStr += Math.tan(+(buf));
                         } else if (j == 4) {
                             newStr += Math.log10(+(buf));
